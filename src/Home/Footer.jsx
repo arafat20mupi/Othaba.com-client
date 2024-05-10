@@ -6,8 +6,8 @@ const Footer = () => {
         <footer className="bg-white dark:bg-gray-900">
             <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
                 <Link to={"/"} className="flex items-center gap-2">
-                    <img className="w-20 h-10" src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <p className="text-2xl md:text-3xl font-bold uppercase bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">HOUSE FOR SALE</p>
+                    <img className="w-40 h-10" src="https://www.othoba.com/Themes/Othoba/Content/images/logoOthoba.png" alt="" />
+                    
                 </Link>
 
                 <p className="text-sm text-gray-600 dark:text-gray-300">© Copyright 2024. All Rights Reserved.</p>

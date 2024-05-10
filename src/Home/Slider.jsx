@@ -1,7 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 const Slider = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
-    const carouselImages = ['https://source.unsplash.com/1200x540/?nature', 'https://source.unsplash.com/1200x540/?hill', 'https://source.unsplash.com/1200x540/?mountain', 'https://source.unsplash.com/1200x540/?river', 'https://source.unsplash.com/1200x540/?sea'];
+    const carouselImages = ['https://i.ibb.co/55TKxFM/istockphoto-1420196426-1024x1024.jpg', 'https://i.ibb.co/0BjtJfS/photo-1577346898588-7a1f1dd5cc79.jpg', 'https://i.ibb.co/gRgnMH6/photo-1541584285245-c83a93cce0e8.jpg', 'https://i.ibb.co/jk06bfc/photo-1570679334008-c97544c8695b.jpg', 'https://i.ibb.co/0BjtJfS/photo-1577346898588-7a1f1dd5cc79.jpg'];
+
+
+
+
+
+
+
     const prevSlider = () => setCurrentSlider((currentSlider) => currentSlider === 0 ? carouselImages.length - 1 : currentSlider - 1);
     const nextSlider = useCallback(() => setCurrentSlider((currentSlider) => currentSlider === carouselImages.length - 1 ? 0 : currentSlider + 1), [carouselImages.length]);
 
@@ -26,7 +33,7 @@ const Slider = () => {
             {/* dots */}
             <div className="flex justify-center items-center rounded-full z-50 absolute bottom-4 w-full gap-1">
                 {carouselImages.map((_, inx) => (
-                    <button key={_} onClick={() => setCurrentSlider(inx)} className={`rounded-full duration-500 bg-white ${currentSlider === inx ? "w-8" : "wz-2"} h-2`}></button>
+                    <button key={_} onClick={() => setCurrentSlider(inx)} className={`rounded-full  duration-500 bg-white ${currentSlider === inx ? "w-8" : "wz-2"} h-2`}></button>
                 ))}
             </div>
             {/* Carousel container */}
