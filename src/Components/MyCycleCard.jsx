@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link, NavLink } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyCycleCard = ({ cycle, setsSpot }) => {
@@ -44,7 +44,7 @@ const MyCycleCard = ({ cycle, setsSpot }) => {
                         {cycle?.product_name}
                     </h3>
                     <div className='space-x-3 '>
-                        <Link to={`/new/${cycle._id}`} >
+                        <Link to={`/update/${cycle._id}`} >
                             <button className="bg-[#E3B577] hover:bg-[#ab8554] text-white btn  ">
                                 Update
                             </button>
@@ -53,7 +53,7 @@ const MyCycleCard = ({ cycle, setsSpot }) => {
                             onClick={handleDelete}
                             className="btn mt-2 btn-secondary">Delete
                         </button>
-                        <Link to={``} >
+                        <Link to={`/users/${_id}`} >
                             <button className="bg-[#8fcd62] hover:bg-[#429b42] text-white btn  ">
                                 Veiw Details
                             </button>

@@ -9,6 +9,7 @@ import AddCycle from "../Pages/AddCycle";
 import PrivateRouter from "./PrivateRouter";
 import MyCycle from "../Pages/MyCycle";
 import CycleCardDetails from "../Components/CycleCardDetails";
+import UpdateCycle from "../Components/UpdateCycle";
 
 export const router = createBrowserRouter([
     {
@@ -43,10 +44,16 @@ export const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/new'),
             },
             {
-                path:'/cycle/:id',
+                path:'/users/:id',
                 element: <PrivateRouter> <CycleCardDetails></CycleCardDetails></PrivateRouter> ,
-                loader: ({params}) => fetch(`https://y-ochre-six.vercel.app/users/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`),
             },
+            {
+                path: '/update/:id',
+                element:<UpdateCycle></UpdateCycle>,
+                loader: ({params}) => fetch(`http://localhost:5000/new/${params.id}`),
+            }
+
         ]
     },
 ]);

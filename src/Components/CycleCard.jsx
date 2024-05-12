@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 const CycleCard = ({ cycle }) => {
-    const {_id ,product_image,query_title,product_name,brand_name,date_posted,}= cycle;
+    const { _id, product_image, query_title, product_name, brand_name, date_posted, } = cycle;
     return (
         <div data-aos="fade-up"
             data-aos-delay="200"
@@ -20,13 +20,13 @@ const CycleCard = ({ cycle }) => {
                     {
                         cycle?.alternation_reason && <p className=" text-lg h-8 text-black">Alternation Reason : {cycle?.alternation_reason} </p>
                     }
-                    
+
                     <p className=" text-lg  text-black">Date Posted : {date_posted} </p>
                     <p className=" text-lg h-8  text-black">Title : {query_title} </p>
                 </div>
 
                 <div className="mt-6">
-                <Link to={`/cycle/${_id}`} type="button" className="flex  items-center justify-center  w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50">View Details</Link>
+                    <Link to={`/users/${_id}`} type="button" className="flex  items-center justify-center  w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50">View Details</Link>
                 </div>
             </div>
         </div>
