@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import CycleCard from "../Components/CycleCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AllCycle = () => {
     const Cycles = useLoaderData()
@@ -19,7 +19,13 @@ const AllCycle = () => {
     };
 
     const sortedCycles = sortByDatePosted(Cycles, sortOrder);
+    const [data, setData] = useState([]);
 
+    useEffect(() => {
+        fetch(`http://localhost:5173/users/${Cycles._id}`)
+            .then((res) => res.json())
+            .then((data) => setData(data))
+    }, [Cycles._id])
     return (
         <div>
             <div className="mb-4">
@@ -36,7 +42,7 @@ const AllCycle = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
-                    sortedCycles.map(cycle => <CycleCard key={cycle._id} cycle={cycle}> </CycleCard>)
+                    sortedCycles.map(cycle => <CycleCard key={cycle._id} cycle={cycle} data={data}> </CycleCard>)
                 }
             </div>
         </div>

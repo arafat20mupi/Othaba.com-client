@@ -10,6 +10,7 @@ import PrivateRouter from "./PrivateRouter";
 import MyCycle from "../Pages/MyCycle";
 import CycleCardDetails from "../Components/CycleCardDetails";
 import UpdateCycle from "../Components/UpdateCycle";
+import AllRecomandation from "../Components/AllRecomandation";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
                 path: '/update/:id',
                 element:<UpdateCycle></UpdateCycle>,
                 loader: ({params}) => fetch(`http://localhost:5000/new/${params.id}`),
+            },
+            {
+                path: 'recomendations/:id',
+                element: <AllRecomandation></AllRecomandation>,
+                loader: ({params}) => fetch(`http://localhost:5000/recommended/${params.id}`),
             }
 
         ]
