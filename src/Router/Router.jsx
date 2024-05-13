@@ -12,6 +12,7 @@ import CycleCardDetails from "../Components/CycleCardDetails";
 import UpdateCycle from "../Components/UpdateCycle";
 import AllRecomandation from "../Components/AllRecomandation";
 import MyRecommendations from "../Pages/MyRecommendations";
+import RecommendationMe from "../Pages/RecommendationMe";
 
 export const router = createBrowserRouter([
     {
@@ -61,9 +62,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/myRecommendation',
-                element: <MyRecommendations></MyRecommendations>,
+                element: <PrivateRouter><MyRecommendations></MyRecommendations></PrivateRouter>,
                 
             },
+            {
+                path: '/recommendationForMe',
+                element: <RecommendationMe></RecommendationMe>
+            }
 
         ]
     },

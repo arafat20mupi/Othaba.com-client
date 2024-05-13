@@ -1,25 +1,51 @@
 /* eslint-disable react/prop-types */
 
-const MyRecommendTR = ({spot}) => {
-    console.log(spot);
+import Swal from "sweetalert2";
+
+const MyRecommendTR = ({ recommend,setData }) => {
+    const handleDelete = () => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/recommended/${recommend._id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                "Deleted!",
+                                "Your Coffee has been deleted.",
+                                "success"
+                            );
+                            setData(recommend._id);
+                        }
+                    })
+                    .catch(error => console.error('Error deleting cycle:', error));
+            }
+        });
+    }
+    console.log(recommend);
     return (
         <tr>
-            <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-            </th>
             <td>
-
+                {recommend.Recommended_Product_Name}
             </td>
             <td>
-
+                {recommend.Recommendation_Title}
             </td>
             <td>
-
+                {recommend.Recommendation_Reason}
             </td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button onClick={handleDelete} className="btn btn-secondary ">Delete</button>
             </th>
         </tr>
     );

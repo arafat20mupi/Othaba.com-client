@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 
 const CycleCard = ({ cycle }) => {
+    console.log(cycle);
     const { _id, product_image, query_title, product_name, brand_name, date_posted, } = cycle;
     return (
         <div data-aos="fade-up"
@@ -17,12 +18,9 @@ const CycleCard = ({ cycle }) => {
                 <div className="space-y-6">
                     <h2 className="text-xl  font-bold tracking-wide">Cycle Name: {product_name}</h2>
                     <h2 className="text-lg  text-black">Cycle Brand :{brand_name}</h2>
-                    {
-                        cycle?.alternation_reason && <p className=" text-lg h-8 text-black">Alternation Reason : {cycle?.alternation_reason} </p>
-                    }
-
                     <p className=" text-lg  text-black">Date Posted : {date_posted} </p>
                     <p className=" text-lg h-8  text-black">Title : {query_title} </p>
+                    <p className=" text-lg h-8  text-black">Recommendation count : {cycle?.recommendation_count} </p>
                 </div>
 
                 <div className="mt-6">
