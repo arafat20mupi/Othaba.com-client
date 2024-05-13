@@ -2,7 +2,7 @@
 import { Link,  } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyCycleCard = ({ cycle, setsSpot }) => {
+const MyCycleCard = ({ cycle, setsData }) => {
     const { product_image, _id } = cycle;
 
     const handleDelete = () => {
@@ -27,7 +27,7 @@ const MyCycleCard = ({ cycle, setsSpot }) => {
                                 "Your Coffee has been deleted.",
                                 "success"
                             );
-                            setsSpot(_id);
+                            setsData(_id);
                         }
                     })
                     .catch(error => console.error('Error deleting cycle:', error));

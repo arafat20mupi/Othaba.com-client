@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 const CycleCardDetails = () => {
     const cycleData = useLoaderData();
     const { user } = useContext(AuthContext);
-    const { product_image, query_title, product_name, alternation_reason, date_posted, recommendation_count } = cycleData;
+    const { product_image, query_title, product_name, boycotting_reason_details, date_posted, recommendation_count } = cycleData;
     const [recommendation, setRecommendation] = useState({
         Recommendation_Title: "",
         Recommended_Product_Name: "",
@@ -84,7 +84,7 @@ const CycleCardDetails = () => {
                 </div>
                 <div className="lg:flex lg:justify-between">
                     <p className=" text-lg font-medium">
-                        Alternation Reason: <span className="text-[#17E3D0] ml-2  lg:mt-0 mt-2">{alternation_reason}</span>
+                    Boycotting reason details: <span className="text-[#17E3D0] ml-2  lg:mt-0 mt-2">{boycotting_reason_details}</span>
                     </p>
                     <p className=" text-lg font-medium lg:ml-6 ">
                         Date Posted: <span className="text-[#17E3D0] ml-2  ">{date_posted}</span>

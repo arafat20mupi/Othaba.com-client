@@ -36,26 +36,14 @@ const AddCycle = () => {
                     autoClose: 1000
                 });
             })
-
-        fetch('http://localhost:5000/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newTourists)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-            })
     }
     return (
         <div className="container mx-auto">
             <Helmet>
-                <title>Add Cycle</title>
+                <title>Add Queries</title>
             </Helmet>
             <div>
-                <h1 className="text-center text-4xl font-bold">Add Tourists Spot</h1>
+                <h1 className="text-center text-4xl font-bold">Add Queries </h1>
             </div>
             <section className="p-6 dark:text-gray-800">
                 <form onSubmit={handleSubmit} className="container w-full max-w-4xl p-8 mx-auto space-y-6 rounded-md shadow bg-gray-200">
@@ -72,12 +60,12 @@ const AddCycle = () => {
                         </div>
                         <div className="flex justify-between">
                             <div className="w-full ">
-                                <label >Cycle Name</label>
-                                <input type="text" name="cycleName" placeholder="Your Cycle Name" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
+                                <label >Queries Name</label>
+                                <input type="text" name="cycleName" placeholder="Your Queries Name" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
                             </div>
                             <div className="w-full ml-2">
-                                <label >Cycle Brand</label>
-                                <input name="cycleBrand" type="text" placeholder="Your Cycle Brand " required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
+                                <label >Queries Brand</label>
+                                <input name="cycleBrand" type="text" placeholder="Your Queries Brand " required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
                             </div>
                         </div>
                         <div className="flex justify-between">
@@ -86,20 +74,20 @@ const AddCycle = () => {
                                 <input type="text" name="Boycot" placeholder="Your Boycotting Reason Details" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
                             </div>
                             <div className="w-full ml-2">
-                                <label > Query Title</label>
-                                <input type="text" name="Title" placeholder="Your  Query Title" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
+                                <label > Queries Title</label>
+                                <input type="text" name="Title" placeholder="Your  Queries Title" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
                             </div>
                         </div>
                         <div className="flex justify-between">
                             <div className="w-full ">
-                                <label >Cycle Image</label>
-                                <input type="text" name="image" placeholder="Your Cycle Image url" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
+                                <label >Queries Image</label>
+                                <input type="text" name="image" placeholder="Your Queries Image url" required className="p-2 w-full rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-600 " />
                             </div>
                         </div>
                     </div>
 
                     <button type="submit" className="w-full bg-gray-800 text-white rounded p-2 mt-4 hover:bg-gray-700 transition duration-300 ease-in-out focus:outline-none focus:ring focus:ring-violet-600 dark:text-white">
-                        Add Cycle Spot
+                        Add Queries
                     </button>
                 </form>
             </section>
