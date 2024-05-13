@@ -2,6 +2,7 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 import MyCycleCard from "../Components/MyCycleCard";
 import { useState, useEffect } from "react";
+import RobotAnimation from "../Components/RobotAnimation";
 
 const MyCycle = () => {
     const data = useLoaderData();
@@ -20,18 +21,25 @@ const MyCycle = () => {
         <div>
             <div>
                 <h1 className="text-3xl font-semibold leading-tight text-center my-6">My Cycle</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    {
-                        spots.map(cycle => (
-                            <MyCycleCard
-                                key={cycle._id}
-                                cycle={cycle}
-                                spots={spots}
-                                setsSpot={handleDeleteCycle}
-                            />
-                        ))
-                    }
-                </div>
+                {
+                    spots.length === 0 ?
+                        <div>
+                            <RobotAnimation></RobotAnimation>
+                        </div>
+                        : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {
+                                spots.map(cycle => (
+                                    <MyCycleCard
+                                        key={cycle._id}
+                                        cycle={cycle}
+                                        spots={spots}
+                                        setsSpot={handleDeleteCycle}
+                                    />
+                                ))
+                            }
+                        </div>
+                }
+
             </div>
             <section className="py-6 mt-5 shadow-2xl rounded-lg  ">
                 <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">

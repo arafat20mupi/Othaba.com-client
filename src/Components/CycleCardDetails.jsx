@@ -1,16 +1,56 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const CycleCardDetails = () => {
     const cycleData = useLoaderData()
     console.log(cycleData);
-    const { product_image, query_title, product_name, alternation_reason, date_posted, } = cycleData;
+    const { _id: quaryId, product_image, query_title, product_name, alternation_reason, date_posted, email, name, recommendation_count } = cycleData;
     const { user } = useContext(AuthContext);
     console.log(user);
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const data = e.target;
+        const Recommendation_Title = data.Recommendation_Title.value;
+        const Recommended_Product_Image = data.Recommended_Product_Image.value;
+        const Recommendation_reason = data.Recommendation_Reason.value;
+        const Recommended_product_Name = data.Recommended_Product_Name.value;
+        const Recommended_email = user.email;
+        const Recommended_Name = user.displayName;
+        const Current_Time_Stamp = new Date().toISOString();
+        const RecommendationData = {
+            Recommendation_Title,
+            Recommended_Product_Image,
+            Recommendation_reason,
+            Recommended_product_Name,
+            quaryId,
+            query_title,
+            product_name,
+            name,
+            email,
+            Recommended_email,
+            Recommended_Name,
+            Current_Time_Stamp
+        }
+        fetch('http://localhost:5000/recommended', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(RecommendationData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success("Add A new Cycle Succesfully", {
+                    position: "top-center",
+                    autoClose: 1000
+                });
+            })
 
     };
+
     return (
         <div className="container flex flex-col justify-center p-6 mx-auto  lg:flex-row lg:justify-between">
             <div className="lg:flex flex-col text-start   w-full ">
@@ -44,7 +84,9 @@ const CycleCardDetails = () => {
                         Date Posted: <span className="text-red-500 ml-2  ">{date_posted}</span>
                     </p>
                 </div>
-
+                <p className=" text-lg font-bold ">
+                    Recommendation Count: <span className="text-red-500 ml-2  ">{recommendation_count}</span>
+                </p>
 
             </div>
             <div className="flex flex-col lg:justify-center space-y-2 p-6  rounded-sm lg:max-w-md xl:max-w-lg ">
