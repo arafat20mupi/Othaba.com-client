@@ -10,7 +10,7 @@ const MyCycle = () => {
     const [data, setsData] = useState([]);
 
     useEffect(() => {
-        fetch(`https://server-side-vert-ten.vercel.app/new/${user.email}`, {credentials: 'include'})
+        fetch(`https://server-query.vercel.app/new/${user.email}`, {credentials: 'include'})
             .then((res) => res.json())
             .then((data) => setsData(data))
     }, [user?.email])

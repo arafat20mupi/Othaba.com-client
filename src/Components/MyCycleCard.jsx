@@ -16,7 +16,7 @@ const MyCycleCard = ({ cycle, setsData }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://server-side-vert-ten.vercel.app/new/${_id}`, {
+                fetch(`https://server-query.vercel.app/new/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

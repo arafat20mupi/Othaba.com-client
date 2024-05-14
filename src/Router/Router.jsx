@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             {
                 path: '/allCycle',
                 element: <AllCycle></AllCycle>,
-                loader: () => fetch('https://server-side-vert-ten.vercel.app/users', {credentials: 'include'}),
+                loader: () => fetch('https://server-query.vercel.app/users', {credentials: 'include'}),
             },
             {
                 path: '/addCycle',
@@ -48,17 +48,17 @@ export const router = createBrowserRouter([
             {
                 path:'/users/:id',
                 element: <PrivateRouter> <CycleCardDetails></CycleCardDetails></PrivateRouter> ,
-                loader: ({params}) => fetch(`https://server-side-vert-ten.vercel.app/users/${params.id}`, {credentials: 'include'}),
+                loader: ({params}) => fetch(`https://server-query.vercel.app/users/${params.id}`, {credentials: 'include'}),
             },
             {
                 path: '/update/:id',
                 element:<UpdateCycle></UpdateCycle>,
-                loader: ({params}) => fetch(`https://server-side-vert-ten.vercel.app/users/${params.id}`, {credentials: 'include'}),
+                loader: ({params}) => fetch(`https://server-query.vercel.app/users/${params.id}`, {credentials: 'include'}),
             },
             {
                 path: '/recomendations/:id',
                 element: <PrivateRouter><AllRecomandation></AllRecomandation></PrivateRouter>,
-                loader: ({params}) => fetch(`https://server-side-vert-ten.vercel.app/recommended/${params.id}`, {credentials: 'include'}),
+                loader: ({params}) => fetch(`https://server-query.vercel.app/recommended/${params.id}`, {credentials: 'include'}),
             },
             {
                 path: '/myRecommendation',
@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
             {
                 path: '/recommendationForMe',
                 element: <PrivateRouter><RecommendationMe></RecommendationMe></PrivateRouter>,
-                loader: () =>  fetch('https://server-side-vert-ten.vercel.app/recommended', {credentials: 'include'}),
+                loader: () =>  fetch('https://server-query.vercel.app/recommended', {credentials: 'include'}),
             }
 
         ]

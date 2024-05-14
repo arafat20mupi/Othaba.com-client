@@ -9,7 +9,7 @@ const MyRecommendations = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`https://server-side-vert-ten.vercel.app/recommendations/${user.email}`, {credentials: 'include'})
+        fetch(`https://server-query.vercel.app/recommendations/${user.email}`, {credentials: 'include'})
             .then((res) => res.json())
             .then((data) => setData(data))
     }, [user.email])

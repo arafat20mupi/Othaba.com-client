@@ -16,7 +16,7 @@ const UpdateCycle = () => {
             query_title
         }
         try {
-            const response = await fetch(`https://server-side-vert-ten.vercel.app/user/${update._id}`, {
+            const response = await fetch(`https://server-query.vercel.app/user/${update._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

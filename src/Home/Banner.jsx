@@ -6,7 +6,7 @@ const Banner = () => {
     const [datas, setDatas] = useState([]);
 
     useEffect(() => {
-        fetch('https://server-side-vert-ten.vercel.app/user/last')
+        fetch('https://server-query.vercel.app/user/last')
             .then((res) => res.json())
             .then((data) => setDatas(data))
     }, [])

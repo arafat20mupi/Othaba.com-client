@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
 
             if (currentUser) {
-                axios.post('https://server-side-vert-ten.vercel.app/jwt', loggedUser, {
+                axios.post('https://server-query.vercel.app/jwt', loggedUser, {
                     withCredentials: true
                  })
                     .then(res => {
@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
                     })
             }
             else {
-                axios.post('https://server-side-vert-ten.vercel.app/logout',loggedUser , {
+                axios.post('https://server-query.vercel.app/logout',loggedUser , {
                     withCredentials: true
                 })
                 .then(res => {
