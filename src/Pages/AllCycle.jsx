@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import CycleCard from "../Components/CycleCard";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { LuLayoutGrid } from "react-icons/lu";
 import { HiOutlineBars3 } from "react-icons/hi2";
 
@@ -8,14 +8,8 @@ const AllCycle = () => {
     const Cycles = useLoaderData();
     const [sortOrder, setSortOrder] = useState("asc");
     const [viewMode, setViewMode] = useState("card");
-    const [data, setData] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
-    useEffect(() => {
-        fetch(`http://localhost:5173/users/some_user_id`) // Adjust the URL as needed.
-            .then((res) => res.json())
-            .then((data) => setData(data));
-    }, []);
 
     const sortByDatePosted = (cycles, order) => {
         return cycles.slice().sort((a, b) => {
@@ -85,7 +79,7 @@ const AllCycle = () => {
             {viewMode === "card" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {sortedCycles.map((cycle) => (
-                        <CycleCard key={cycle._id} cycle={cycle} data={data} />
+                        <CycleCard key={cycle._id} cycle={cycle}  />
                     ))}
                 </div>
             ) : (
