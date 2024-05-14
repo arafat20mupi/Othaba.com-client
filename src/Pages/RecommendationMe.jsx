@@ -12,9 +12,9 @@ const RecommendationMe = () => {
     return (
         <div >
             {
-                data.length === 0 ? <RobotAnimation></RobotAnimation> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                data.length == 0 ? <RobotAnimation></RobotAnimation> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
-                        data.filter(d => d?.userEmail === user?.email).map(re => <RecomendationMeCard key={re._id} re={re}></RecomendationMeCard>)
+                        data?.filter(d => d?.userEmail === user?.email).map(re => <RecomendationMeCard key={re._id} re={re}></RecomendationMeCard>)
                     }
                 </div>
             }

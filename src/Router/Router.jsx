@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             {
                 path: '/allCycle',
                 element: <AllCycle></AllCycle>,
-                loader: () => fetch('http://localhost:5000/users'),
+                loader: () => fetch('http://localhost:5000/users', {credentials: 'include'}),
             },
             {
                 path: '/addCycle',
@@ -48,17 +48,17 @@ export const router = createBrowserRouter([
             {
                 path:'/users/:id',
                 element: <PrivateRouter> <CycleCardDetails></CycleCardDetails></PrivateRouter> ,
-                loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`, {credentials: 'include'}),
             },
             {
                 path: '/update/:id',
                 element:<UpdateCycle></UpdateCycle>,
-                loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`, {credentials: 'include'}),
             },
             {
                 path: '/recomendations/:id',
-                element: <AllRecomandation></AllRecomandation>,
-                loader: ({params}) => fetch(`http://localhost:5000/recommended/${params.id}`),
+                element: <PrivateRouter><AllRecomandation></AllRecomandation></PrivateRouter>,
+                loader: ({params}) => fetch(`http://localhost:5000/recommended/${params.id}`, {credentials: 'include'}),
             },
             {
                 path: '/myRecommendation',
@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
             {
                 path: '/recommendationForMe',
                 element: <PrivateRouter><RecommendationMe></RecommendationMe></PrivateRouter>,
-                loader: () =>  fetch('http://localhost:5000/recommended'),
+                loader: () =>  fetch('http://localhost:5000/recommended', {credentials: 'include'}),
             }
 
         ]

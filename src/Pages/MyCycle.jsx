@@ -10,10 +10,10 @@ const MyCycle = () => {
     const [data, setsData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/new/${user.email}`)
+        fetch(`http://localhost:5000/new/${user.email}`, {credentials: 'include'})
             .then((res) => res.json())
             .then((data) => setsData(data))
-    }, [user.email])
+    }, [user?.email])
 
     const handleDeleteCycle = (deletedCycleId) => {
         const remainingSpots = data.filter(cycle => cycle._id !== deletedCycleId);

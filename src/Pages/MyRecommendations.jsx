@@ -9,7 +9,7 @@ const MyRecommendations = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/recommendations/${user.email}`)
+        fetch(`http://localhost:5000/recommendations/${user.email}`, {credentials: 'include'})
             .then((res) => res.json())
             .then((data) => setData(data))
     }, [user.email])
