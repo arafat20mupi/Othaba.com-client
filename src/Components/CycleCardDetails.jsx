@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 
 const CycleCardDetails = () => {
     const cycleData = useLoaderData();
+    console.log(cycleData);
     const { user } = useContext(AuthContext);
     const { product_image, query_title, product_name, boycotting_reason_details, date_posted, recommendation_count } = cycleData;
     const [recommendation, setRecommendation] = useState({
