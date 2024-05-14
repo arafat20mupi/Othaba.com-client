@@ -6,8 +6,8 @@ import toast from "react-hot-toast";
 const CycleCardDetails = () => {
     const cycleData = useLoaderData();
     console.log(cycleData);
-    const { user } = useContext(AuthContext);
     const { product_image, query_title, product_name, boycotting_reason_details, date_posted, recommendation_count } = cycleData;
+    const { user } = useContext(AuthContext);
     const [recommendation, setRecommendation] = useState({
         Recommendation_Title: "",
         Recommended_Product_Name: "",
@@ -43,6 +43,11 @@ const CycleCardDetails = () => {
                 body: JSON.stringify(RecommendationData)
             });
             if (response.ok) {
+                const data = await response.json();
+                // Update recommendation_count in cycleData
+                cycleData.recommendation_count = data.recommendation_count;
+
+                // Show success toast
                 toast.success("Recommendation added successfully", {
                     position: "top-center",
                     autoClose: 2000
@@ -58,6 +63,8 @@ const CycleCardDetails = () => {
             });
         }
     };
+
+
     return (
         <div className="container flex flex-col justify-center p-6 mx-auto  lg:flex-row lg:justify-between">
             <div className="lg:flex flex-col text-start   w-full ">

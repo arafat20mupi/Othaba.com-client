@@ -10,8 +10,6 @@ const RecommendationMe = () => {
     const data = useLoaderData()
     console.log(data);
 
-
-
     return (
         <div >
             {

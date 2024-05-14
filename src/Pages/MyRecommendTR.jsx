@@ -2,7 +2,7 @@
 
 import Swal from "sweetalert2";
 
-const MyRecommendTR = ({ recommend,setData }) => {
+const MyRecommendTR = ({ recommend, setData }) => {
     const handleDelete = () => {
         Swal.fire({
             title: "Are you sure?",
@@ -22,16 +22,16 @@ const MyRecommendTR = ({ recommend,setData }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 "Deleted!",
-                                "Your Coffee has been deleted.",
+                                "Your recommendation has been deleted.",
                                 "success"
                             );
                             setData(recommend._id);
                         }
                     })
-                    .catch(error => console.error('Error deleting cycle:', error));
+                    .catch(error => console.error('Error deleting recommendation:', error));
             }
         });
-    }
+    };
     console.log(recommend);
     return (
         <tr>
