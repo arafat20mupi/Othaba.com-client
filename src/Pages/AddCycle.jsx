@@ -21,7 +21,7 @@ const AddCycle = () => {
         const newTourists = {
             name, email, product_image, product_name, brand_name, boycotting_reason_details, query_title, userImage, date_posted, recommendation_count
         }
-        fetch('http://localhost:5000/new', {
+        fetch('https://server-side-vert-ten.vercel.app/new', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

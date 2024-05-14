@@ -34,7 +34,7 @@ const CycleCardDetails = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/recommended', {
+            const response = await fetch('https://server-side-vert-ten.vercel.app/recommended', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
