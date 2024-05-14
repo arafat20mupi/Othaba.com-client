@@ -12,7 +12,6 @@ const Slider = () => {
     const prevSlider = () => setCurrentSlider((currentSlider) => currentSlider === 0 ? carouselImages.length - 1 : currentSlider - 1);
     const nextSlider = useCallback(() => setCurrentSlider((currentSlider) => currentSlider === carouselImages.length - 1 ? 0 : currentSlider + 1), [carouselImages.length]);
 
-    // if you don't want to change the slider automatically then you can just remove the useEffect
     useEffect(() => {
         const intervalId = setInterval(() => {
             nextSlider();

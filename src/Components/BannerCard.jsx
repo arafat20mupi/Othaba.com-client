@@ -15,8 +15,8 @@ const BannerCard = ({ data }) => {
 
                 <div className="flex flex-col justify-between p-6 space-y-4">
                     <div className="space-y-4">
-                        <h2 className="text-xl  font-bold tracking-wide">Quare Name: {product_name}</h2>
-                        <h2 className="text-lg  text-black">Quare Brand :{brand_name}</h2>
+                        <h2 className="text-xl  font-bold tracking-wide">Product Name: {product_name}</h2>
+                        <h2 className="text-lg  text-black">Product Brand :{brand_name}</h2>
                         <p className=" text-lg text-black">Date Posted : {date_posted} </p>
                         <p className=" text-lg h-8 text-black">Title : {query_title} </p>
                     </div>
