@@ -8,7 +8,6 @@ import RobotAnimation from "../Components/RobotAnimation";
 const RecommendationMe = () => {
     const { user, } = useContext(AuthContext)
     const data = useLoaderData()
-    console.log(data);
 
     return (
         <div >

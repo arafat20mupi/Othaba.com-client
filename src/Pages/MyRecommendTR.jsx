@@ -32,7 +32,6 @@ const MyRecommendTR = ({ recommend, setData }) => {
             }
         });
     };
-    console.log(recommend);
     return (
         <tr>
             <td>

@@ -2,7 +2,6 @@
 import { Link } from "react-router-dom";
 
 const CycleCard = ({ cycle }) => {
-    console.log(cycle);
     const { _id, product_image, query_title, product_name, brand_name, date_posted, } = cycle;
     return (
         <div data-aos="fade-up"

@@ -4,7 +4,6 @@ import RobotAnimation from "./RobotAnimation";
 
 const AllRecomandation = () => {
     const allRecomands = useLoaderData();
-    console.log(allRecomands);
     return (
         <div>
             {

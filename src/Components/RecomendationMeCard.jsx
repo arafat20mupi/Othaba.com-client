@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 const RecomendationMeCard = ({ re }) => {
-    console.log(re);
     const { Recommended_Product_Name, Recommendation_Title, Recommended_Product_Image, Recommendation_Reason, } = re;
     return (
         <div>

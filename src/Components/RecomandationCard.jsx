@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 const RecomandationCard = ({ recomand }) => {
-    console.log(recomand);
     const {Recommended_Product_Name ,Recommendation_Title ,Recommended_Product_Image ,Recommendation_Reason ,} = recomand;
     return (
         <div data-aos="fade-up"

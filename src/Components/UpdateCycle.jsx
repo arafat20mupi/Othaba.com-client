@@ -3,7 +3,6 @@ import Swal from "sweetalert2";
 
 const UpdateCycle = () => {
     const update = useLoaderData();
-    console.log(update);
 
     const handleUpdate = async (e) => {
         e.preventDefault();

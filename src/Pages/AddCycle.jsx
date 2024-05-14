@@ -29,8 +29,7 @@ const AddCycle = () => {
             body: JSON.stringify(newTourists)
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
+            .then(() => {
                 toast.success("Add A new Cycle Succesfully", {
                     position: "top-center",
                     autoClose: 1000
