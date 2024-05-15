@@ -1,5 +1,7 @@
 import Banner from "./Banner";
+import Pricing from "./Pricing";
 import Slider from "./Slider";
+import Teams from "./Teams";
 
 const Home = () => {
     return (
@@ -9,6 +11,12 @@ const Home = () => {
             </div>
             <div className="lg:my-12 my-6 ">
                 <Banner></Banner>
+            </div>
+            <div className="lg:my-12 my-6 ">
+                <Teams></Teams>
+            </div>
+            <div className="lg:my-12 my-6 ">
+                <Pricing></Pricing>
             </div>
         </div>
     );

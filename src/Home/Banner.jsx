@@ -14,7 +14,7 @@ const Banner = () => {
     return (
         <div >
 
-            <h1 className="text-3xl font-bold w-full text-center mt-10 mb-5">Our Latest Queries</h1>
+            <h1 className="text-3xl font-bold w-full text-center mt-10 mb-5">Latest Queries</h1>
             <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
                 {datas.map((data, index) => <BannerCard key={index} data={data}></BannerCard>)}
             </div>
