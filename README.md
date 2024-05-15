@@ -1,8 +1,22 @@
-# React + Vite
+# Othaba.com 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the repository for my awesome website.
 
-Currently, two official plugins are available:
+### assignment_category_0009
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Links
+Firebase host Live Link : https://assienment-11.web.app/
+
+
+## Features
+
+- Responsive design
+- User authentication
+- Social media Authenthication
+- Team Section
+- Toggle dark and Light themes
+- Users Add/update/Delete his own Query about a product in The System
+- Users view other queries for alternative products in the Websites and see the Details and other recommendations also.
+- Users Add recommendations also for certain products.
+- Users delete their recommendations from .
+- Users Modify / Delete their comments also.
