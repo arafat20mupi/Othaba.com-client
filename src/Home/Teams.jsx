@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 const Teams = () => {
     return (
-        <section data-aos="fade-up" data-aos-duration="2000" className="text-gray-600 bg-slate-50 body-font">
+        <section data-aos="fade-up" data-aos-duration="2000" className="text-gray-600 rounded-lg bg-white body-font">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>

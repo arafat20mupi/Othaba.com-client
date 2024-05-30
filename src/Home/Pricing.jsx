@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 const Pricing = () => {
     return (
-        <section className="text-gray-600 bg-slate-300 body-font overflow-hidden">
+        <section className="text-gray-600 rounded-lg bg-white body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
                 <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="900" className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>

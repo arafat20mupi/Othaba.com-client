@@ -1,3 +1,4 @@
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
 import Banner from "./Banner";
 import Pricing from "./Pricing";
 import Slider from "./Slider";
@@ -17,6 +18,9 @@ const Home = () => {
             </div>
             <div className="lg:my-12 my-6 ">
                 <Pricing></Pricing>
+            </div>
+            <div className="lg:my-12 my-6 ">
+               <PrivacyPolicy></PrivacyPolicy>
             </div>
         </div>
     );
