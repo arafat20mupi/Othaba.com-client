@@ -2,7 +2,6 @@
 
 This is the repository for my awesome website.
 
-### assignment_category_0009
 
 ## 🔗 Links
 - **Firebase Host Live Link**: [Othaba.com](https://assienment-11.web.app/)
