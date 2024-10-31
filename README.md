@@ -1,7 +1,3 @@
-Certainly! Here’s a polished README for your **Othaba.com** project:
-
----
-
 # 🛍️ Othaba.com
 
 Welcome to **Othaba.com**! This is the repository for my dynamic and user-centric e-commerce website where users can explore product queries, add recommendations, and much more.
