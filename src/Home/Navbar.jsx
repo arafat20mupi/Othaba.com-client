@@ -61,11 +61,11 @@ const Navbar = () => {
                                     <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                                         <img title={user?.displayName} src={user?.photoURL || "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"} className="object-cover w-full h-full" alt="avatar" />
                                     </div>
-                                    <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">{user?.displayName}</h3>
+                                    <h3 className="mx-2  ">{user?.displayName}</h3>
                                     <button onClick={() => handleLogOut()} className='btn btn-success text-white btn-sm'>Log Out</button>
                                 </div>
                             ) : (
-                                <Link to={"/login"} className='btn btn-accent btn-sm font-bold'>Log in</Link>
+                                <Link to={"/login"} className='btn bg-blue-500 btn-sm font-bold'>Log in</Link>
                             )}
                         </div>
 

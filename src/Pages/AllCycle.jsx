@@ -88,7 +88,7 @@ const AllCycle = () => {
                         <tr>
                             <th className="py-2 px-4 border-b">Product Name</th>
                             <th className="py-2 px-4 border-b">Date Posted</th>
-                            <th className="py-2 px-4 border-b">Query Title</th>
+                            <th className="py-2 px-4 border-b">Brand Name</th>
                             <th className="py-2 px-4 border-b">View Details</th>
                         </tr>
                     </thead>
@@ -97,7 +97,7 @@ const AllCycle = () => {
                             <tr key={cycle._id}>
                                 <td className="py-2 px-4 border-b">{cycle.product_name}</td>
                                 <td className="py-2 px-4 border-b">{new Date(cycle.date_posted).toLocaleDateString()}</td>
-                                <td className="py-2 px-4 border-b">{cycle.query_title}</td>
+                                <td className="py-2 px-4 border-b">{cycle.brand_name}</td>
                                 <td className="py-2 px-4 border-b">
                                     <Link to={`/users/${cycle._id}`} className="btn bg-blue-500 text-white">
                                         View Details

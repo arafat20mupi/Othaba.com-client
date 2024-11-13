@@ -19,6 +19,7 @@ const AddCycle = () => {
         const userImage = user.photoURL;
         const date_posted = new Date().toLocaleString();
         const recommendation_count = 0;
+        const price = data.price.value;
 
         // Upload product image
         let product_image;
@@ -41,6 +42,7 @@ const AddCycle = () => {
             query_title,
             userImage,
             date_posted,
+            price,
             recommendation_count,
         };
 
@@ -52,16 +54,16 @@ const AddCycle = () => {
             },
             body: JSON.stringify(newTourists)
         })
-        .then(res => res.json())
-        .then(() => {
-            toast.success("Added a new Product successfully!", {
-                position: "top-center",
-                autoClose: 1000
+            .then(res => res.json())
+            .then(() => {
+                toast.success("Added a new Product successfully!", {
+                    position: "top-center",
+                    autoClose: 1000
+                });
+            })
+            .catch(() => {
+                toast.error("Failed to add Product. Please try again.");
             });
-        })
-        .catch(() => {
-            toast.error("Failed to add Product. Please try again.");
-        });
     };
 
     return (
@@ -77,42 +79,49 @@ const AddCycle = () => {
                     <div>
                         <div className="flex justify-between">
                             <div className="w-full">
-                                <label>Name</label>
+                                <label className="text-xl font-bold my-2">Name</label>
                                 <input type="text" name="name" disabled defaultValue={user?.displayName} required className="p-2 w-full rounded bg-slate-100" />
                             </div>
                             <div className="w-full ml-2">
-                                <label>Email</label>
+                                <label className="text-xl font-bold my-2">Email</label>
                                 <input type="text" name="email" defaultValue={user?.email} disabled required className="p-2 w-full rounded bg-slate-100" />
                             </div>
                         </div>
                         <div className="flex justify-between">
                             <div className="w-full">
-                                <label>Product Name</label>
+                                <label className="text-xl font-bold my-2">Product Name</label>
                                 <input type="text" name="cycleName" placeholder="Your Product Name" required className="p-2 w-full rounded bg-slate-100" />
                             </div>
                             <div className="w-full ml-2">
-                                <label>Product Brand</label>
+                                <label className="text-xl font-bold my-2">Product Brand</label>
                                 <input type="text" name="cycleBrand" placeholder="Your Product Brand" required className="p-2 w-full rounded bg-slate-100" />
                             </div>
                         </div>
                         <div className="flex justify-between">
                             <div className="w-full">
-                                <label>Boycotting Reason Details</label>
+                                <label className="text-xl font-bold my-2">Boycotting Reason Details</label>
                                 <input type="text" name="Boycot" placeholder="Your Boycotting Reason Details" required className="p-2 w-full rounded bg-slate-100" />
                             </div>
                             <div className="w-full ml-2">
-                                <label>Product Title</label>
+                                <label className="text-xl font-bold my-2">Product Title</label>
                                 <input type="text" name="Title" placeholder="Your Product Title" required className="p-2 w-full rounded bg-slate-100" />
                             </div>
                         </div>
-                        <div className="flex justify-between">
-                            <div className="w-full">
-                                <label>Product Image</label>
-                                <input type="file" name="image" required className="p-2 w-full rounded bg-slate-100 border" />
+                        <div>
+
+                            <div className="flex justify-between">
+                                <div className="w-full">
+                                    <label className="text-xl font-bold my-2">Product Image</label>
+                                    <input type="file" name="image" required className=" p-2 w-full rounded bg-slate-100" />
+                                </div>
+                                <div className="w-full ml-2">
+                                    <label className="text-xl font-bold my-2">Price</label>
+                                    <input type="number" name="price" placeholder="Your Product Price" required className="p-2 w-full rounded bg-slate-100" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" className="w-full bg-primary text-white rounded p-2 mt-4 transition duration-300 ease-in-out dark:text-white">
+                    <button type="submit" className="w-full bg-blue-500 text-white rounded p-2 mt-4 transition duration-300 ease-in-out dark:text-white">
                         Add Product
                     </button>
                 </form>

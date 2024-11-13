@@ -1,7 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 const Slider = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
-    const carouselImages = ['https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXIlMjA0a3xlbnwwfDB8MHx8fDA%3D', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVhcnklMjBwcm9kdWN0fGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cXVhcnklMjBwcm9kdWN0fGVufDB8MHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHF1YXJ5JTIwcHJvZHVjdHxlbnwwfDB8MHx8fDA%3D', 'https://images.unsplash.com/photo-1542598953-41310c43f54b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHF1YXJ5JTIwcHJvZHVjdHxlbnwwfDB8MHx8fDA%3D'];
+    const carouselImages = [
+  'https://cdn.corporatefinanceinstitute.com/assets/product-mix3.jpeg',
+  'https://ecommercephotographyindia.com/blog/wp-content/uploads/2022/07/beauty-products-1.jpg',
+  'https://www.meteorelectrical.com/media/wysiwyg/dev.jpeg',
+  'https://www.menap-smi.org/wp-content/uploads/title-banner-The-Role-of-the-Pharmacist-in-Self-Care-and-Self-Medication.jpg',
+  'https://www.nogorpolli.com/wp-content/uploads/2018/12/list-of-top-15-fashion-or-clothing-brands-house-in-bangladesh-nogorpolli-%E0%A6%A8%E0%A6%97%E0%A6%B0-%E0%A6%AA%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A7%80-nogor-polli-apparel-clothing-fashion-store.png'
+];
+
     const prevSlider = () => setCurrentSlider((currentSlider) => currentSlider === 0 ? carouselImages.length - 1 : currentSlider - 1);
     const nextSlider = useCallback(() => setCurrentSlider((currentSlider) => currentSlider === carouselImages.length - 1 ? 0 : currentSlider + 1), [carouselImages.length]);
 
