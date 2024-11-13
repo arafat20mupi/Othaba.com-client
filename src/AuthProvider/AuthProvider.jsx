@@ -63,9 +63,6 @@ const AuthProvider = ({ children }) => {
                 axios.post('https://server-query.vercel.app/jwt', loggedUser, {
                     withCredentials: true
                  })
-                    .then(res => {
-                        console.log("token response", res.data);
-                    })
             }
             else {
                 axios.post('https://server-query.vercel.app/logout',loggedUser , {
@@ -82,7 +79,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [user?.email])
 
-    const authInfo = { user, createUser, signIn, logOut, googleSignIn, facebookSignIn, githubSignIn, resetPassword, loading, upDateProfile, setReload };
+    const authInfo = { user, createUser,reload, signIn, logOut, googleSignIn, facebookSignIn, githubSignIn, resetPassword, loading, upDateProfile, setReload };
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

@@ -11,7 +11,6 @@ const Navbar = () => {
         logOut();
         toast.success('Successfully logout!')
     }
-
     return (
         <nav className="relative  shadow ">
             <div className="container px-6 py-4 mx-auto">
@@ -35,12 +34,12 @@ const Navbar = () => {
                     </div>
                     <div className={`${isOpen ? 'block' : 'hidden'} lg:flex md:gap-5 lg:items-center lg:mx-8`}>
                         <NavLink to={"/"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>Home</NavLink>
-                        <NavLink to={"/allCycle"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>All Queries</NavLink>
+                        <NavLink to={"/allCycle"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>All Product</NavLink>
                         {
                             user && <NavLink to={`/recommendationForMe`} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>Recommendation Me</NavLink>
                         }
                         {
-                            user && <NavLink to={"/myCycle"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>My Queries</NavLink>
+                            user && <NavLink to={"/myCycle"} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>My Product</NavLink>
                         }
                         {
                             user && <NavLink to={`/myRecommendation`} className={({ isActive, isPending }) => isActive ? "active text-red-600 hover:underline" : isPending ? "pending " : "block px-3 py-2 mt-2 text-[#2FA0D9] transition-colors duration-300 transform rounded-md lg:mt-0   hover:bg-gray-100 dark:hover:bg-gray-700"}>My Recommendation</NavLink>
