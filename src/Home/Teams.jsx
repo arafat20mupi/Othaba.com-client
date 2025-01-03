@@ -3,9 +3,9 @@ const Teams = () => {
     const teamMembers = [
         {
             name: "Mehedi Hasan Sakir",
-            title: "Web Designer",
+            title: "Front End Developer",
             intro: "Creative web designer focused on crafting visually stunning, user-centered experiences.",
-            image: "https://scontent.fdac15-1.fna.fbcdn.net/v/t39.30808-6/438300081_1680503052760910_7178580970211281053_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG-T5RNZOTSSW9oJljhVs30_vBvrBP_L4j-8G-sE_8viMd39MAcYtzZPxRVdKYrqRlRN8KQcyGNDv1uleVsqxld&_nc_ohc=MBA7jnM_iGUQ7kNvgHJPxqN&_nc_zt=23&_nc_ht=scontent.fdac15-1.fna&_nc_gid=Ad83fSBtN2gYJ7yfFgwux6y&oh=00_AYAsr6eOu83ghD1TczCS76y0UWWKDHOj7EN27Lp05rFXvg&oe=673A3651",
+            image: "https://i.ibb.co.com/wNg6nfm/image.png",
             socialLinks: {
                 facebook: "https://www.facebook.com/mehedihasan.akondo.3",
                 github: "#",
@@ -16,7 +16,7 @@ const Teams = () => {
             name: "Md Mehedi Hasan",
             title: "Front End Developer",
             intro: "Passionate front-end developer focused on creating responsive and interactive web interfaces.",
-            image: "https://scontent.fdac15-1.fna.fbcdn.net/v/t39.30808-6/414110357_909368497360237_7583089320849102035_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGysbYEOxgtVnIZDJUKIHgG3xWEtyhphVXfFYS3KGmFVTOqK-vHZEyPivx1JKSMr0rdjAtgfWu81KFnBATVhNdz&_nc_ohc=1s9JtI7U4lsQ7kNvgFd28Iz&_nc_zt=23&_nc_ht=scontent.fdac15-1.fna&_nc_gid=A2FewLL0n3sWQwYJ7eiXRgE&oh=00_AYCYIsRxPPFnt_S_S9zqavXFiEgjDpBJl7gZybeQfSfVAA&oe=673A3B8B",
+            image: "https://i.ibb.co.com/BtwS6KV/image.png",
             socialLinks: {
                 facebook: "https://www.facebook.com/md.mehedi.hasan.g.r",
                 github: "#",
@@ -38,7 +38,7 @@ const Teams = () => {
             name: "Bibak Bose",
             title: "Front End Developer",
             intro: "Skilled front-end developer with a keen eye for detail and a passion for user experience.",
-            image: "https://scontent.fdac15-1.fna.fbcdn.net/v/t39.30808-6/293014784_569487148010016_3480904187726782232_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFroO-6zwMzGbWkbBmMohX55dfdLvEcJMTl190u8RwkxCQI_vGCVQgkOIix1AFbrimCrQhjKsEh8d4MN14aJrDX&_nc_ohc=lCI0MneTWicQ7kNvgEkT95D&_nc_zt=23&_nc_ht=scontent.fdac15-1.fna&_nc_gid=AQU42Ilru2-v2sm04LtFqDH&oh=00_AYB7Zf1z1g8WDfY2BCAOyj4zp2dWxZvw_36n7V-Ybr39fw&oe=673A54A7",
+            image: "https://i.ibb.co.com/WGZFBLh/image.png",
             socialLinks: {
                 facebook: "https://www.facebook.com/bibek.bose.9883",
                 github: "#",
@@ -56,7 +56,7 @@ const Teams = () => {
             </div>
             <div className="w-full py-8 flex justify-center items-center">
                 <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow-lg overflow-hidden md:flex-row transition-transform hover:scale-105">
-                    <img className="w-full h-80 md:w-1/2 object-cover hover:opacity-90 transition-all" src='https://scontent.fdac15-1.fna.fbcdn.net/v/t39.30808-6/465839855_1350522805924781_2891526088187287211_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF1_yBy6WWbtxx9Fo4XGaAYCuzmIUoVGukK7OYhShUa6bkauKb52qvCx96ig1BGUoSL-bjZjPxXJvvd-kKx4vyq&_nc_ohc=HDajyTbCexYQ7kNvgE59JsI&_nc_zt=23&_nc_ht=scontent.fdac15-1.fna&_nc_gid=ACCZTF8UGRr1PJrvqCjqi0y&oh=00_AYDu__jmpNFbhNDGTWWKUKctGviVs-BVG7bEjwOy7yMFdA&oe=673A527B' alt={`Arafat Islam photo`} />
+                    <img className="w-full h-80 md:w-1/2 object-cover hover:opacity-90 transition-all" src='https://i.ibb.co.com/PrdttMz/465839855-1350522805924781-2891526088187287211-n.jpg' alt={`Arafat Islam photo`} />
                     <div className="p-6 md:max-w-sm  md:p-8">
                         <h3 className="text-black text-2xl font-semibold">Arafat Islam</h3>
                         <span className=" my-2 block">Team Leader & Backend Developer</span>
